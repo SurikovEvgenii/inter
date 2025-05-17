@@ -1,11 +1,25 @@
 package ru.surikov.interriera.service;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ru.surikov.interriera.entity.Project;
 import ru.surikov.interriera.repository.ProjectRepository;
 
+import java.util.List;
+
 @Service
-@RequiredArgsConstructor
 public class ProjectRepositoryService {
-    private final ProjectRepository projectRepository;
+
+    @Autowired
+    private ProjectRepository projectRepository;
+
+    public List<Project> findAll() {
+        List<Project> projectList = projectRepository.findAll();
+        return projectList;
+    }
+
+    public void save(Project project) {
+        projectRepository.save(project);
+    }
 }

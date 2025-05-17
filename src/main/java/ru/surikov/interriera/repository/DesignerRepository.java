@@ -1,4 +1,9 @@
 package ru.surikov.interriera.repository;
 
-public class DesignerRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import ru.surikov.interriera.entity.Designer;
+
+@Repository
+public interface DesignerRepository extends JpaRepository<Designer, Long> {
 }

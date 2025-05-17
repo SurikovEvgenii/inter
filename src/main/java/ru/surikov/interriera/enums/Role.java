@@ -1,4 +1,5 @@
 package ru.surikov.interriera.enums;
 
-public class Role {
+public enum Role {
+    ADMIN, USER, DESIGNER, GUEST
 }

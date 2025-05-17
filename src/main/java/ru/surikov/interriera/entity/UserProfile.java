@@ -1,4 +1,5 @@
 package ru.surikov.interriera.entity;
 
-public interface UserProfile {
-}
+import lombok.RequiredArgsConstructor;
+
+public interface UserProfile {}
